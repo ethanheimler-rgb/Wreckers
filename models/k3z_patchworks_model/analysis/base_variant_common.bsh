@@ -73,6 +73,7 @@ int Patchworks_TargetInit() {
    */
    control.calculateGroups("AU");
    control.calculateGroups("IFM");
+   control.inputGroups("../tracks_overlay_basecase_sum/groups.csv");
 
    setupYieldFlowTargets(control, periods, tracks_path_prefix);
    validateSeralStageAttributes();
@@ -147,7 +148,7 @@ int PatchWorks_Init() {
     DefaultTheme def = new DefaultTheme(blockData, new PolygonSymbol(new Color(204, 204, 255)));
     Layer defLayer = new GeoRelLayer(blockData, def);
     layers.add(defLayer);
-
+	
    /*
     * This map layer shows the harvest treatments in the current period
     */
@@ -194,6 +195,134 @@ int PatchWorks_Init() {
     Layer seral2Layer = new GeoRelLayer(blockData, seral2);
     seral2Layer.setTitle("Seral Stages");
     layers.add(seral2Layer);
+	
+/**
+ * These commands will set up the map viewer with the following layers:
+ * - Rec Areas
+ * - Seral Stages
+ * - Latest Treatments
+ * - Current Treatments
+ * - Block attributes
+ * - Seral Stages
+ * - Latest Treatments
+ * - Current Treatments
+ * - Block attributes
+ *
+ * Copy this map layer definition code into the console or script file.
+ * You might need to rename some of the variables in case
+ * the same names have already been used.
+ */
+
+theme1 = new DefaultTheme(new PolygonSymbol(new Color(204, 204, 255)) // symbol
+);
+theme1.setCaption("Block attributes");
+layer0 = new GeoRelLayer(control.getBlockTable(), // table
+    theme1, // theme
+    "" // fieldname
+);
+theme3 = new UniqueValueTheme();
+theme3.setCaption("Current Treatments");
+theme3.setUnclassified(new ThemeElement("", new PolygonSymbol(Color.white, new LineSymbol(new SimpleLineSymbol(null, 1.0))).setVisibility(0.0, 1.7976931348623157E308, AlphaComposite.Clear)));
+theme3.setUseUnclassified(true);
+theme3.addElement(new ThemeElement("CC", new PolygonSymbol(new Color(243, 137, 139))), "CC");
+layer2 = new GeoRelLayer(control.getBlockTable(), // table
+    theme3, // theme
+    "CURRENTTREATMENT" // fieldname
+);
+layer2.setVisible(false);
+theme5 = new UniqueValueTheme();
+theme5.setCaption("Latest Treatments");
+theme5.setUnclassified(new ThemeElement("", new PolygonSymbol(Color.white, new LineSymbol(new SimpleLineSymbol(null, 1.0))).setVisibility(0.0, 1.7976931348623157E308, AlphaComposite.Clear)));
+theme5.setUseUnclassified(true);
+theme5.addElement(new ThemeElement("CC", new PolygonSymbol(new Color(243, 137, 139))), "CC");
+layer4 = new GeoRelLayer(control.getBlockTable(), // table
+    theme5, // theme
+    "LASTTREATMENT" // fieldname
+);
+layer4.setVisible(false);
+theme7 = new DitherTheme();
+theme7.setCaption("Dithered Seral Stage");
+theme7.addElement("Regen", new Color(250, 230, 0), "feature.Seral.regenerating");
+theme7.addElement("Young", new Color(200, 250, 200), "feature.Seral.young");
+theme7.addElement("Immature", new Color(160, 220, 160), "feature.Seral.immature");
+theme7.addElement("Mature", new Color(100, 190, 100), "feature.Seral.mature");
+theme7.addElement("Old", new Color(128, 64, 64), "feature.Seral.overmature");
+layer6 = new GeoRelLayer(control.getBlockTable(), // table
+    theme7, // theme
+    "feature.Seral." // fieldname
+);
+layer6.setTitle("Seral Stages");
+theme9 = new DefaultTheme(new PolygonSymbol(new Color(204, 204, 255)) // symbol
+);
+theme9.setCaption("Block attributes");
+theme9.setAlpha(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.37f));
+layer8 = new GeoRelLayer(control.getBlockTable(), // table
+    theme9, // theme
+    "" // fieldname
+);
+theme11 = new UniqueValueTheme();
+theme11.setCaption("Current Treatments");
+theme11.setUnclassified(new ThemeElement("", new PolygonSymbol(Color.white, new LineSymbol(null, 1.0)).setVisibility(0.0, 1.7976931348623157E308, AlphaComposite.Clear)));
+theme11.setUseUnclassified(true);
+theme11.addElement(new ThemeElement("CC", new PolygonSymbol(new Color(243, 137, 139))), "CC");
+layer10 = new GeoRelLayer(control.getBlockTable(), // table
+    theme11, // theme
+    "CURRENTTREATMENT" // fieldname
+);
+layer10.setVisible(false);
+theme13 = new UniqueValueTheme();
+theme13.setCaption("Latest Treatments");
+theme13.setUnclassified(new ThemeElement("", new PolygonSymbol(Color.white, new LineSymbol(null, 1.0)).setVisibility(0.0, 1.7976931348623157E308, AlphaComposite.Clear)));
+theme13.setUseUnclassified(true);
+theme13.addElement(new ThemeElement("CC", new PolygonSymbol(new Color(243, 137, 139))), "CC");
+layer12 = new GeoRelLayer(control.getBlockTable(), // table
+    theme13, // theme
+    "LASTTREATMENT" // fieldname
+);
+layer12.setVisible(false);
+theme15 = new DitherTheme();
+theme15.setCaption("Dithered Seral Stage");
+theme15.addElement("Regen", new Color(250, 230, 0), "feature.Seral.regenerating");
+theme15.addElement("Young", new Color(200, 250, 200), "feature.Seral.young");
+theme15.addElement("Immature", new Color(160, 220, 160), "feature.Seral.immature");
+theme15.addElement("Mature", new Color(100, 190, 100), "feature.Seral.mature");
+theme15.addElement("Old", new Color(128, 64, 64), "feature.Seral.overmature");
+layer14 = new GeoRelLayer(control.getBlockTable(), // table
+    theme15, // theme
+    "feature.Seral." // fieldname
+);
+layer14.setTitle("Seral Stages");
+layer14.setVisible(false);
+theme17 = new UniqueValueTheme();
+theme17.setCaption("group ");
+theme17.addElement(new ThemeElement("", new PolygonSymbol(null)), "");
+theme17.addElement(new ThemeElement("Bike1", new PolygonSymbol(new Color(255, 204, 230))), "Bike1");
+theme17.addElement(new ThemeElement("Bike2", new PolygonSymbol(new Color(255, 128, 191))), "Bike2");
+theme17.addElement(new ThemeElement("Bike3", new PolygonSymbol(new Color(255, 0, 128))), "Bike3");
+theme17.addElement(new ThemeElement("Camp1", new PolygonSymbol(new Color(204, 230, 255))), "Camp1");
+theme17.addElement(new ThemeElement("Camp2", new PolygonSymbol(new Color(128, 191, 255))), "Camp2");
+theme17.addElement(new ThemeElement("Camp3", new PolygonSymbol(new Color(0, 128, 255))), "Camp3");
+theme17.addElement(new ThemeElement("ECO1", new PolygonSymbol(new Color(204, 255, 204))), "ECO1");
+theme17.addElement(new ThemeElement("ECO2", new PolygonSymbol(new Color(128, 255, 128))), "ECO2");
+theme17.addElement(new ThemeElement("ECO3", new PolygonSymbol(Color.green)), "ECO3");
+theme17.addElement(new ThemeElement("Hike1", new PolygonSymbol(new Color(255, 230, 204))), "Hike1");
+theme17.addElement(new ThemeElement("Hike2", new PolygonSymbol(new Color(255, 191, 128))), "Hike2");
+theme17.addElement(new ThemeElement("Hike3", new PolygonSymbol(new Color(255, 128, 0))), "Hike3");
+layer16 = new GeoRelLayer(control.getBlockTable(), // table
+    theme17, // theme
+    "group " // fieldname
+);
+layer16.setTitle("Rec Areas");
+layers.add(layer0);
+layers.add(layer2);
+layers.add(layer4);
+layers.add(layer6);
+layers.add(layer8);
+layers.add(layer10);
+layers.add(layer12);
+layers.add(layer14);
+layers.add(layer16);
+
 
    /*
     * Put patch maps here.
