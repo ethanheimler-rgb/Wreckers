@@ -76,15 +76,44 @@ int Patchworks_TargetInit() {
    control.calculateGroups("AU");
    control.calculateGroups("IFM");
    control.inputGroups("../tracks_overlay_basecase_sum/groups.csv");
+   
+    // Net revenue
+	control.addMetaAccount("value.nrevenue.total",
+	new String [] {"value.grevenue.total",
+	"value.harvcost.total",
+	"value.stumpage.total"},
+	new double [] {1, -1, -1});
 
-   setupYieldFlowTargets(control, periods, tracks_path_prefix);
+	setupYieldFlowTargets(control, periods, tracks_path_prefix);
    setupHarvestedQmdRatioAccounts(control, tracks_path_prefix);
    validateSeralStageAttributes();
-
-   /*
+   
+    /*
     * Summary accounts here
     */
+	
+	
+	// Stumpage accounts
+	control.duplicateAccount("product.Yield.managed.CW", "value.stumpage.CW" , 0.47f);
+	control.duplicateAccount("product.Yield.managed.FDC", "value.stumpage.FDC" , 0.29f);
+	control.duplicateAccount("product.Yield.managed.HW", "value.stumpage.HW" , 0.35f);
+	
+	control.duplicateAccount("value.stumpage.CW" , "value.stumpage.total" , 1f);
+	control.duplicateAccount("value.stumpage.FDC" , "value.stumpage.total" , 1f);		
+	control.duplicateAccount("value.stumpage.HW" , "value.stumpage.total" , 1f);
+	
+	// Logging costs
+    control.duplicateAccount("product.Yield.managed.Total", "value.harvcost.total", 87.5f);
 
+	// Gross log revenue
+	control.duplicateAccount("product.Yield.managed.CW", "value.grevenue.CW", 254.15f);
+	control.duplicateAccount("product.Yield.managed.FDC", "value.grevenue.FDC", 113.24f);	
+	control.duplicateAccount("product.Yield.managed.HW", "value.grevenue.HW", 79.87f);
+	
+	control.duplicateAccount("value.grevenue.CW" , "value.grevenue.total" , 1f);
+	control.duplicateAccount("value.grevenue.FDC" , "value.grevenue.total" , 1f);
+	control.duplicateAccount("value.grevenue.HW" , "value.grevenue.total" , 1f);
+   
    /*
     * Load topology file here
     */
