@@ -203,6 +203,28 @@ int PatchWorks_Init() {
     layers.add(seral2Layer);
 
    /*
+    * Rec Areas map layer
+    */
+    UniqueValueTheme recAreaTheme = new UniqueValueTheme();
+    recAreaTheme.setCaption("group ");
+    recAreaTheme.addElement(new ThemeElement("", new PolygonSymbol(null)), "");
+    recAreaTheme.addElement(new ThemeElement("Bike1", new PolygonSymbol(new Color(255, 204, 230))), "Bike1");
+    recAreaTheme.addElement(new ThemeElement("Bike2", new PolygonSymbol(new Color(255, 128, 191))), "Bike2");
+    recAreaTheme.addElement(new ThemeElement("Bike3", new PolygonSymbol(new Color(255, 0, 128))), "Bike3");
+    recAreaTheme.addElement(new ThemeElement("Camp1", new PolygonSymbol(new Color(204, 230, 255))), "Camp1");
+    recAreaTheme.addElement(new ThemeElement("Camp2", new PolygonSymbol(new Color(128, 191, 255))), "Camp2");
+    recAreaTheme.addElement(new ThemeElement("Camp3", new PolygonSymbol(new Color(0, 128, 255))), "Camp3");
+    recAreaTheme.addElement(new ThemeElement("ECO1", new PolygonSymbol(new Color(204, 255, 204))), "ECO1");
+    recAreaTheme.addElement(new ThemeElement("ECO2", new PolygonSymbol(new Color(128, 255, 128))), "ECO2");
+    recAreaTheme.addElement(new ThemeElement("ECO3", new PolygonSymbol(Color.green)), "ECO3");
+    recAreaTheme.addElement(new ThemeElement("Hike1", new PolygonSymbol(new Color(255, 230, 204))), "Hike1");
+    recAreaTheme.addElement(new ThemeElement("Hike2", new PolygonSymbol(new Color(255, 191, 128))), "Hike2");
+    recAreaTheme.addElement(new ThemeElement("Hike3", new PolygonSymbol(new Color(255, 128, 0))), "Hike3");
+    Layer recAreaLayer = new GeoRelLayer(control.getBlockTable(), recAreaTheme, "group ");
+    recAreaLayer.setTitle("Rec Areas");
+    layers.add(recAreaLayer);
+
+   /*
     * Put patch maps here.
     */
     if (usePatches) {
@@ -246,6 +268,8 @@ int PatchWorks_Init() {
 
    if (femicHeadlessMode)
       femicQueueHeadlessStage();
+
+   } // end if (!femicHeadlessMode)
 
    /*
     * Put route reports here.
