@@ -20,11 +20,25 @@ Horizon.setHorizon(periods, 10);
  */
 boolean useRoutes = false;
 boolean usePatches = false;
+/*
+ * Keep the very large AU/species/log-grade teaching surfaces hidden by
+ * default. Set true when you explicitly want the full log-grade volume and
+ * value bridge in the Patchworks UI.
+ */
+boolean enableLogGradeAccounts = false;
 
 sourceRelative("../scripts/targets/flowTargets.bsh");
 sourceRelative("../scripts/targets/qmdRatioAccounts.bsh");
 sourceRelative("../scripts/targets/seralStages.bsh");
 sourceRelative("headless_runtime_common.bsh");
+
+String femicTrackCsv(String stem) {
+   String defaultPath = tracks_path_prefix + stem + ".default.csv";
+   if (!enableLogGradeAccounts && AttributeStore.absoluteFile(defaultPath).exists()) {
+      return defaultPath;
+   }
+   return tracks_path_prefix + stem + ".csv";
+}
 
 /*
  * Locate the input matrix data files
@@ -32,10 +46,10 @@ sourceRelative("headless_runtime_common.bsh");
 blocks = tracks_path_prefix + "blocks.csv";
 curves = tracks_path_prefix + "curves.csv";
 features = tracks_path_prefix + "features.csv";
-products = tracks_path_prefix + "products.csv";
+products = femicTrackCsv("products");
 tracknames = tracks_path_prefix + "tracknames.csv";
 treatments = tracks_path_prefix + "treatments.csv";
-accounts = tracks_path_prefix + "accounts.csv";
+accounts = femicTrackCsv("accounts");
 stratas = tracks_path_prefix + "strata.csv";
 if (
     AttributeStore.absoluteFile(tracks_path_prefix + "packages.csv").exists()
@@ -94,13 +108,21 @@ int Patchworks_TargetInit() {
 	
 	
 	// Stumpage accounts
+	control.duplicateAccount("product.Yield.managed.BA", "value.stumpage.BA" , 0.29f);
 	control.duplicateAccount("product.Yield.managed.CW", "value.stumpage.CW" , 0.47f);
 	control.duplicateAccount("product.Yield.managed.FDC", "value.stumpage.FDC" , 0.29f);
 	control.duplicateAccount("product.Yield.managed.HW", "value.stumpage.HW" , 0.35f);
+	control.duplicateAccount("product.Yield.managed.PLC", "value.stumpage.PLC" , 0.29f);
+	control.duplicateAccount("product.Yield.managed.SS", "value.stumpage.SS" , 0.25f);
+	control.duplicateAccount("product.Yield.managed.YC", "value.stumpage.YC" , 0.55f);
 	
+	control.duplicateAccount("value.stumpage.BA" , "value.stumpage.total" , 1f);
 	control.duplicateAccount("value.stumpage.CW" , "value.stumpage.total" , 1f);
 	control.duplicateAccount("value.stumpage.FDC" , "value.stumpage.total" , 1f);		
 	control.duplicateAccount("value.stumpage.HW" , "value.stumpage.total" , 1f);
+	control.duplicateAccount("value.stumpage.PLC" , "value.stumpage.total" , 1f);	
+	control.duplicateAccount("value.stumpage.SS" , "value.stumpage.total" , 1f);	
+	control.duplicateAccount("value.stumpage.YC" , "value.stumpage.total" , 1f);	
 	
 	// Logging costs
     control.duplicateAccount("product.Yield.managed.Total", "value.harvcost.total", 87.5f);
@@ -109,10 +131,18 @@ int Patchworks_TargetInit() {
 	control.duplicateAccount("product.Yield.managed.CW", "value.grevenue.CW", 254.15f);
 	control.duplicateAccount("product.Yield.managed.FDC", "value.grevenue.FDC", 113.24f);	
 	control.duplicateAccount("product.Yield.managed.HW", "value.grevenue.HW", 79.87f);
+	control.duplicateAccount("product.Yield.managed.BA", "value.grevenue.BA", 79.87f);
+	control.duplicateAccount("product.Yield.managed.SS", "value.grevenue.SS", 80.08f);
+	control.duplicateAccount("product.Yield.managed.YC", "value.grevenue.YC", 164.55f);
+	control.duplicateAccount("product.Yield.managed.PLC", "value.grevenue.PLC", 71.05f);
 	
 	control.duplicateAccount("value.grevenue.CW" , "value.grevenue.total" , 1f);
 	control.duplicateAccount("value.grevenue.FDC" , "value.grevenue.total" , 1f);
 	control.duplicateAccount("value.grevenue.HW" , "value.grevenue.total" , 1f);
+	control.duplicateAccount("value.grevenue.BA" , "value.grevenue.total" , 1f);
+	control.duplicateAccount("value.grevenue.SS" , "value.grevenue.total" , 1f);
+	control.duplicateAccount("value.grevenue.YC" , "value.grevenue.total" , 1f);
+	control.duplicateAccount("value.grevenue.PLC" , "value.grevenue.total" , 1f);
    
    /*
     * Load topology file here
