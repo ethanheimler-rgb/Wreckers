@@ -1,0 +1,108 @@
+TIME,ITERATION,OBJECTIVE,TYPE,DETAIL
+3/31/26, 3:32:09 PM PDT,0,0.0,Version,"2025.07 (2025-07-21 09:08:19 beanshell3-9b893)"
+3/31/26, 3:32:10 PM PDT,0,0.0,Load file,"PIN file 'C:/Users/eheimler.stu/Documents/Wreckers/Wreckers/models/k3z_patchworks_model/analysis/overlay_basecase_sum.pin' using BeanShell: 3.0.0-SPS.5569"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"Opening block shapefile ../blocks/blocks.shpwith key BLOCK"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"Loading blocks from C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\blocks.csv"
+3/31/26, 3:32:11 PM PDT,0,0.0,Load file,"Block file 'C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\blocks.csv'"
+3/31/26, 3:32:11 PM PDT,0,0.0,Hash code,"Block file 'B11D8683059DE029F7E917D4E32D49B03ABDF7C2'"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"Total blocks read: 218"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"Blocks with managed tracks: 181"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"Blocks with unmanaged tracks: 141"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"Loading curves from C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\curves.csv"
+3/31/26, 3:32:11 PM PDT,0,0.0,Load file,"Curve file 'C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\curves.csv'"
+3/31/26, 3:32:11 PM PDT,0,0.0,Hash code,"Curve file '91C785244533B7C7CB69028F3D7F4EC05F547F6B'"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"2559 curves read from 63675 records"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"Loading treatments from C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\treatments.csv"
+3/31/26, 3:32:11 PM PDT,0,0.0,Load file,"Treatment file 'C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\treatments.csv'"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"1 unique non-manual treatment labels read"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"Loading features from C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\features.csv"
+3/31/26, 3:32:11 PM PDT,0,0.0,Load file,"Feature file 'C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\features.csv'"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"198 unique attributes after reading features"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"Loading products from C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\products.csv"
+3/31/26, 3:32:11 PM PDT,0,0.0,Load file,"Product file 'C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\products.csv'"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"302 unique attributes after reading products"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"Loading track names from C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\tracknames.csv"
+3/31/26, 3:32:11 PM PDT,0,0.0,Load file,"Tracknames file 'C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\tracknames.csv'"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"275 tracknames were read and 275 were properly matched"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"Loading strata codes from C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\strata.csv"
+3/31/26, 3:32:11 PM PDT,0,0.0,Load file,"Strata file 'C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\strata.csv'"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"275 strata were read and 275 were properly matched"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"Loading package definitions from C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\packages.csv"
+3/31/26, 3:32:11 PM PDT,0,0.0,Load file,"Package 'C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\packages.csv'"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"0 package records were read"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"Loading sequence definitions from C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\packageSequences.csv"
+3/31/26, 3:32:11 PM PDT,0,0.0,Load file,"Sequences 'C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\packageSequences.csv'"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"0 sequence records were read"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"Resolving packages"
+3/31/26, 3:32:11 PM PDT,0,0.0,Status,"Loading accounts from C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\accounts.csv"
+3/31/26, 3:32:11 PM PDT,0,0.0,Load file,"Account file 'C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\analysis\..\tracks_overlay_basecase_sum\accounts.csv'"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"Calculate groups using AU"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"Calculate groups using IFM"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"Adding groups from ..\tracks_overlay_basecase_sum\groups.csv"
+3/31/26, 3:32:12 PM PDT,0,0.0,Load file,"Group file '..\tracks_overlay_basecase_sum\groups.csv'"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"Values from account 'product.Yield.managed.CW' will be duplicated into account 'value.stumpage.CW'"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"Values from account 'product.Yield.managed.FDC' will be duplicated into account 'value.stumpage.FDC'"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"Values from account 'product.Yield.managed.HW' will be duplicated into account 'value.stumpage.HW'"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"Values from account 'value.stumpage.CW' will be duplicated into account 'value.stumpage.total'"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"Values from account 'value.stumpage.FDC' will be duplicated into account 'value.stumpage.total'"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"Values from account 'value.stumpage.HW' will be duplicated into account 'value.stumpage.total'"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"Values from account 'product.Yield.managed.Total' will be duplicated into account 'value.harvcost.total'"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"Values from account 'product.Yield.managed.CW' will be duplicated into account 'value.grevenue.CW'"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"Values from account 'product.Yield.managed.FDC' will be duplicated into account 'value.grevenue.FDC'"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"Values from account 'product.Yield.managed.HW' will be duplicated into account 'value.grevenue.HW'"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"Values from account 'value.grevenue.CW' will be duplicated into account 'value.grevenue.total'"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"Values from account 'value.grevenue.FDC' will be duplicated into account 'value.grevenue.total'"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"Values from account 'value.grevenue.HW' will be duplicated into account 'value.grevenue.total'"
+3/31/26, 3:32:12 PM PDT,0,0.0,Load file,"Topology file '..\blocks\topology_blocks_200r.csv'"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"Loading topology from ..\blocks\topology_blocks_200r.csv using a distance of 100.0"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"1221 edge records loaded from topology file"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"334 attribute summary accounts"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"9 intermediate summary accounts"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"21 meta accounts"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"364 targets"
+3/31/26, 3:32:12 PM PDT,0,0.0,Status,"Initialize account values"
+3/31/26, 3:32:12 PM PDT,0,0.0,Target values changed,"Changes started at 3/31/26, 3:32:12 PM PDT"
+3/31/26, 3:32:12 PM PDT,0,0.0,Initialized,""
+3/31/26, 3:32:13 PM PDT,0,0.0,Status,"Evaluating PatchWorks_Init"
+3/31/26, 3:32:14 PM PDT,0,0.0,Status,"PatchWorks_Init completed"
+3/31/26, 3:34:26 PM PDT,0,299583.6202,Target values changed,"Changes started at 3/31/26, 3:33:08 PM PDT"
+3/31/26, 3:34:26 PM PDT,0,299583.6202,Scheduling,
+3/31/26, 3:35:01 PM PDT,200000,19.478900000000003,Scheduling,
+3/31/26, 3:35:11 PM PDT,255000,19.478900000000003,Target values changed,"Changes started at 3/31/26, 3:35:07 PM PDT"
+3/31/26, 3:35:11 PM PDT,255000,19.478900000000003,Status,"Objective value changed direction: previous=0.0 current=19.478900000000003"
+3/31/26, 3:35:37 PM PDT,400000,19.478900000000003,Target values changed,"Changes started at 3/31/26, 3:35:22 PM PDT"
+3/31/26, 3:35:37 PM PDT,400000,19.478900000000003,Scheduling,
+3/31/26, 3:36:17 PM PDT,600000,19.478900000000003,Scheduling,
+3/31/26, 3:37:07 PM PDT,800000,19.478900000000003,Scheduling,
+3/31/26, 3:37:43 PM PDT,1000000,19.478900000000003,Scheduling,
+3/31/26, 3:37:49 PM PDT,1030470,19.478900000000003,Warning,"java.lang.Exception: Report targets/_CampTotal_HarvestVolume.csv not known in report writer"
+3/31/26, 3:38:03 PM PDT,1068826,19.478900000000003,Warning,"java.lang.Exception: Report targets/_CampTotal_HarvestVolume.csv not known in report writer"
+3/31/26, 3:38:28 PM PDT,1200000,19.478900000000003,Scheduling,
+3/31/26, 3:39:16 PM PDT,1400000,19.478900000000003,Scheduling,
+3/31/26, 3:40:07 PM PDT,1600000,19.478900000000003,Scheduling,
+3/31/26, 3:40:59 PM PDT,1800000,19.478900000000003,Scheduling,
+3/31/26, 3:42:03 PM PDT,2000000,19.478900000000003,Scheduling,
+3/31/26, 3:42:54 PM PDT,2200000,19.478900000000003,Scheduling,
+3/31/26, 3:43:40 PM PDT,2400000,19.478900000000003,Scheduling,
+3/31/26, 3:44:19 PM PDT,2600000,19.478900000000003,Scheduling,
+3/31/26, 3:44:56 PM PDT,2800000,19.478900000000003,Scheduling,
+3/31/26, 3:45:12 PM PDT,2886520,19.478900000000003,Save scenario,"Save stage Scenarios (Wreckers) to C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\Scenarios (Wreckers)"
+3/31/26, 3:45:27 PM PDT,2886876,19.478900000000003,Save completed,""
+3/31/26, 3:45:48 PM PDT,3000000,19.478900000000003,Scheduling,
+3/31/26, 3:46:25 PM PDT,3200000,19.478900000000003,Scheduling,
+3/31/26, 3:46:50 PM PDT,3335000,3151.3292000000006,Target values changed,"Changes started at 3/31/26, 3:46:46 PM PDT"
+3/31/26, 3:46:50 PM PDT,3335000,3151.3292000000006,Status,"Objective value changed direction: previous=19.478900000000003 current=3151.3292000000006"
+3/31/26, 3:46:56 PM PDT,3365000,1.406457714179653E8,Target values changed,"Changes started at 3/31/26, 3:46:53 PM PDT"
+3/31/26, 3:46:56 PM PDT,3365000,1.406457714179653E8,Status,"Objective value changed direction: previous=323.7430449000001 current=1.406457714179653E8"
+3/31/26, 3:47:02 PM PDT,3400000,1103.3627000000001,Target values changed,"Changes started at 3/31/26, 3:47:00 PM PDT"
+3/31/26, 3:47:02 PM PDT,3400000,1103.3627000000001,Scheduling,
+3/31/26, 3:47:04 PM PDT,3410000,5.051112765615914E8,Target values changed,"Changes started at 3/31/26, 3:47:04 PM PDT"
+3/31/26, 3:47:04 PM PDT,3410000,5.051112765615914E8,Status,"Objective value changed direction: previous=785.7294000000002 current=5.051112765615914E8"
+3/31/26, 3:47:08 PM PDT,3430000,39217.55030000002,Target values changed,"Changes started at 3/31/26, 3:47:07 PM PDT"
+3/31/26, 3:47:08 PM PDT,3430000,39217.55030000002,Status,"Objective value changed direction: previous=0.0 current=39217.55030000002"
+3/31/26, 3:47:38 PM PDT,3600000,23243.2442,Scheduling,
+3/31/26, 3:48:14 PM PDT,3800000,22634.910900000006,Scheduling,
+3/31/26, 3:49:01 PM PDT,4000000,22599.784400000004,Scheduling,
+3/31/26, 3:49:40 PM PDT,4200000,22599.6624,Scheduling,
+3/31/26, 3:50:20 PM PDT,4400000,22599.6624,Scheduling,
+3/31/26, 3:50:50 PM PDT,4480150,22599.6624,Save scenario,"Save stage Full Rec to C:\Users\eheimler.stu\Documents\Wreckers\Wreckers\models\k3z_patchworks_model\Scenarios (Wreckers)\Full Rec"

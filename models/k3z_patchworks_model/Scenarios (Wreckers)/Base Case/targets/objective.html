@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Active target objective summary, Scenarios (Wreckers) scenario</title>
+<link rel="icon" href="../html/sps.ico">
+<script src="../html/jquery-3.4.1.min.js"></script>
+<script src="../html/jquery-ui-1.12.1.custom.min.js"></script>
+<link href="../html/smoothness/jquery-ui-1.12.1.custom.css" type="text/css" rel="stylesheet">
+<script src="../html/pw.js"></script>
+<link href="../html/pw.css" type="text/css" rel="stylesheet">
+</head>
+<body onLoad="windowTitle('Active target objective summary, Scenarios (Wreckers) scenario')">
+<script>header('../')</script>
+<div class="mainContent">
+<h2 class="title">Active target objective summary, Scenarios (Wreckers) scenario</h2>
+
+<table border="1" cellspacing="0" class="dataTable">
+<tr><th>Target</th><th>Period 1</th><th>Period 2</th><th>Period 3</th><th>Period 4</th><th>Period 5</th><th>Period 6</th><th>Period 7</th><th>Period 8</th><th>Period 9</th><th>Period 10</th><th>Period 11</th><th>Period 12</th><th>Period 13</th><th>Period 14</th><th>Period 15</th><th>Period 16</th><th>Period 17</th><th>Period 18</th><th>Period 19</th><th>Period 20</th><th>Period 21</th><th>Period 22</th><th>Period 23</th><th>Period 24</th><th>Period 25</th><th>Period 26</th><th>Period 27</th><th>Period 28</th><th>Period 29</th><th>Period 30</th><th>Total</th></tr>
+<tbody style="text-align:right;">
+<tr><td><a href="feature_Area_og2_total.html">feature.Area.og2.total</a></td>
+<td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr>
+<tr><td><a href="product_Yield_managed_Total.html">product.Yield.managed.Total</a></td>
+<td>2.1867</td><td>0.33180000000000004</td><td>0.3074</td><td>0.41470000000000007</td><td>0.5443000000000001</td><td>0.2242</td><td>0.7406000000000001</td><td>7.707900000000001</td><td>0.6159</td><td>1.7580000000000002</td><td>0.2634</td><td>1.1148</td><td>0.4312</td><td>0.0313</td><td>0.2162</td><td>0.08140000000000001</td><td>0.4659</td><td>0.2465</td><td>0.7054</td><td>0.069</td><td>0.23850000000000005</td><td>0.22340000000000002</td><td>0.1844</td><td>0.0355</td><td>0.09060000000000001</td><td>0.005000000000000001</td><td>0.1075</td><td>0.0189</td><td>0.0583</td><td>0.060200000000000004</td><td>19.478900000000003</td></tr>
+</tbody></table>
+<p>
+<div class="extraHtml">
+<p>Contribution to the objective function by target by period.
+</div>
+<br>
+</div> <!-- end of mainContent -->
+<div class="csvLink noprint">
+<br/><a href="objective.csv?scenario=Scenarios+%28Wreckers%29+scenario">Download data file in CSV format</a>
+</div>
+<div class="indexLink noprint">
+<br/><a href="index.html">Return to the index</a>
+</div>
+
+<script>
+$(document).ready(function() {
+  var shower, hider;
+  shower = function() {
+    $("#paramList").show();
+    $("#paramButton span.ui-icon").removeClass("ui-icon-triangle-1-e").addClass("ui-icon-triangle-1-s");
+    $("#paramButton").on("click", hider);
+    document.getElementById('paramList').scrollIntoView();
+   }
+   hider = function() {
+    $("#paramButton span.ui-icon").removeClass("ui-icon-triangle-1-s").addClass("ui-icon-triangle-1-e");
+    $("#paramList").hide();
+    $("#paramButton").on("click", shower);
+  }
+  $("#paramButton").on("click", shower);
+});
+</script>
+
+<br/><a class="noprint" id="paramButton" style="text-decoration: none;"><span class="ui-icon ui-icon-triangle-1-e" style="float: left;"></span>Report parameters</a>
+<table border="1" cellspacing="0" class="reportParams noprint" id="paramList" style="display: none">
+<tr><th>Report type</th><td>Shortage Report</td></tr>
+<tr><th>Column</th><td>OBJECTIVE</td></tr>
+</table>
+
+<hr /><div class="footer">Spatial Planning Systems, generated on March 31, 2026, 3:45 PM (303)</div>
+
